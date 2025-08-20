@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment SANZ KAGENOU</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url('https://files.catbox.moe/ruzk85.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 350px;
+  margin: auto;
+}
+
+.card h1 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.qr-section img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: red;
+}
+
+.buttons {
+  margin: 15px 0;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+small {
+  font-size: 0.75em;
+  color: #333;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>💳 PAYMENT SANZ KAGENOU</h1>
+      <div class="qr-section">
+        <img src="https://files.catbox.moe/qweod4.jpg" alt="QRIS Code">
+      </div>
+      <p>WAJIB MENYERTAKAN BUKTI TRANSFER KE ADMIN</p>
+      <div class="buttons">
+        <button onclick="copyToClipboard('08156050130')">DANA</button>
+        <button onclick="copyToClipboard('08156050130')">GOPAY</button>
+      </div>
+      <small>Klik tombol untuk menyalin nomor pembayaran</small>
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(text) {
+  navigator.clipboard.writeText(text)
+    .then(() => alert('Nomor berhasil disalin: ' + text))
+    .catch(err => alert('Gagal menyalin'));
+}
+  </script>
+</body>
+</html>
